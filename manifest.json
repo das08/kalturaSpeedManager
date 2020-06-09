@@ -1,0 +1,36 @@
+{
+  "name": "Kaltura Speed Manager",
+  "description": "Add speed option bar to Kaltura video player",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "img/icon16.png",
+      "24": "img/icon24.png",
+      "32": "img/icon32.png"
+    },
+    "default_title": "kaltura Speed Manager"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": [
+        "content_script.js"
+      ],
+      "css": [
+        "css/custom-kaltura.css"
+      ],
+      "matches": [
+        "http://*/*", "https://*/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "css/custom-kaltura.css"
+  ]
+}
